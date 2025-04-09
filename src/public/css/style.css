@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    ---cor-fundo: #000000;
+    ---cor-visor: #262626;
+    ---cor-letras-principal-visor: #F2BE14;
+    ---cor-letras-resultado-visor: #8F7727;
+    ---cor-teclas: #E66210;
+    ---cor-teclas-hover: #a5470d;
+    ---cor-teclas-esp: #F6960F;
+    ---cor-teclas-esp-hover: #b37217;
+    ---cor-letra-teclas: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(---cor-fundo);
+    font-family: "Inter", sans-serif;
+}
+
+/*---------- Parte da Header ----------*/
+.barra-menu{    
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(---cor-letra-teclas);
+    background-color: var(---cor-visor);
+    padding: 0 0 0 5px;
+    height: 27px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.barra-menu img{
+    -webkit-app-region: no-drag;
+    width: 25px;
+    height: 25px;
+}
+
+.barra-menu span{
+    font-weight: bold;
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -25px;
+}
+
+.barra-menu label{
+    -webkit-app-region: no-drag;
+    background-color: red;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-menu label:hover{
+    background-color: rgb(179, 14, 14);
+    transition: 0.5s;
+}
+
+/*---------- Parte do visor ----------*/
+.visor{
+    background-color: var(---cor-visor);
+    width: 225px;
+    height: 65px;
+    border-radius: 17px;    
+    text-align: right;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin: 4px;
+    margin-left: 15px;
+}
+
+.visor .principal{
+    color: var(---cor-letras-principal-visor);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.visor .previa{
+    color: var(---cor-letras-resultado-visor);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*---------- Parte do teclado ----------*/
+.teclas{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 5px;
+    margin-top: 10px;
+    margin-left: 7px;
+    justify-content: center;
+}
+
+.teclas button{
+    width: 50px;
+    height: 50px;
+    background-color: var(---cor-teclas);
+    color: var(---cor-letra-teclas);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.teclas button:hover{
+    background-color: var(---cor-teclas-hover);
+    transition: 0.4s;
+}
+
+#ac:hover, #del:hover, #soma:hover{
+    background-color: var(---cor-teclas-esp-hover);
+    transition: 0.4s;
+}
+
+#ac{
+    font-size: 25px;
+    background-color: var(---cor-teclas-esp);
+}
+
+#del{
+    font-size: 20px;
+    background-color: var(---cor-teclas-esp);
+}
+
+#soma{
+    grid-row: span 2;
+    background-color: var(---cor-teclas-esp);
+    height: 108px;
+    align-self: stretch;
+}

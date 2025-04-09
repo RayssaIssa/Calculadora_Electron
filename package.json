@@ -1,0 +1,27 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "Calculadora com HTML, CSS e JavaScript",
+  "homepage": "https://github.com/RayssaIssa/Calculadora_Electron#readme",
+  "bugs": {
+    "url": "https://github.com/RayssaIssa/Calculadora_Electron/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayssaIssa/Calculadora_Electron.git"
+  },
+  "license": "MIT",
+  "author": "Rayssa Costa",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^35.1.5"
+  },
+  "dependencies": {
+    "calculadora": "file:"
+  }
+}
